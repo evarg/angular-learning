@@ -1,0 +1,30 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+    <li class="breadcrumb-item active" aria-current="page">Nasionka</li>
+  </ol>
+</nav>
+
+<div class="container">
+  <div class="fs-2 mb-3">
+    <i
+      (click)="onNew()"
+      class="bi bi-file-earmark-plus"
+      data-toggle="tooltip"
+      data-placement="top"
+      title="Dodaj nowe nasionko"
+      ></i
+    >&nbsp;
+  </div>
+
+  <div class="card-deck" style="padding-left: 10px">
+    <app-grain
+      *ngFor="let grain of grains"
+      name="{{ grain.name }}"
+      desc="{{ grain.desc }}"
+      image="https://a.allegroimg.com/s512/03c1bf/9d06e1f14effb4763890c8fc5122/Swieza-Ghost-Pepper-bardzo-ostra-papryka-1-kg-Opakowanie-torebka"
+      link="/grains/details/{{ grain.id }}"
+    ></app-grain>
+  </div>
+</div>
+

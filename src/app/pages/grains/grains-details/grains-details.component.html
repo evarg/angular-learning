@@ -1,0 +1,47 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+    <li class="breadcrumb-item active" aria-current="page">Nasionka</li>
+  </ol>
+</nav>
+
+<div class="container">
+  <div class="fs-2 mb-3">
+    <i
+      (click)="onCancel()"
+      class="bi bi-backspace"
+      data-toggle="tooltip"
+      data-placement="top"
+      title="Wróć do listy"
+    ></i
+    >&nbsp;
+    <i
+      (click)="onChange()"
+      class="bi bi-pencil"
+      data-toggle="tooltip"
+      data-placement="top"
+      title="Edytuj nasionko"
+    ></i
+    >&nbsp;
+    <i
+      (click)="onDelete()"
+      class="bi bi-trash3"
+      data-toggle="tooltip"
+      data-placement="top"
+      title="Usuń nasionko. Uwaga brak potwierdzania!"
+    ></i
+    >&nbsp;
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <h3 class="card-title">
+        {{ grain.name }}
+      </h3>
+      <h4 class="card-subtitle mb-2 text-muted">{{ grain.name_latin }}</h4>
+      <p class="card-text">
+        {{ grain.desc }}
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,76 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+    <li class="breadcrumb-item active" aria-current="page">
+      <a routerLink="/grains" routerLinkActive="active">Nasionka</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Dodaj nowe</li>
+  </ol>
+</nav>
+
+<div class="container">
+  <form #add="ngForm" (ngSubmit)="onSubmit()">
+    <div class="fs-2 mb-3">
+      <i
+        (click)="onCancel()"
+        class="bi bi-backspace"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="Wróć do szczegółów"
+      ></i
+      >&nbsp;
+      <i
+        (click)="onSubmit()"
+        class="bi bi-save"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="Zapisz zmiany"
+      ></i
+      >&nbsp;
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="orginalName">Nazwa</label>
+          <input
+            [(ngModel)]="grain.name"
+            #ctrl="ngModel"
+            name="d1"
+            type="text"
+            class="form-control"
+            id="orginalName"
+            aria-describedby="emailHelp"
+            placeholder="Nazwa"
+          />
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="latinName">Nazwa łacińska</label>
+          <input
+            [(ngModel)]="grain.name_latin"
+            #ctrl="ngModel"
+            name="d2"
+            type="text"
+            class="form-control"
+            id="latinName"
+            placeholder="Nazwa łacińska"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="desc">Opis</label>
+      <textarea
+        [(ngModel)]="grain.desc"
+        #ctrl="ngModel"
+        name="d3"
+        class="form-control"
+        id="desc"
+        rows="3"
+      ></textarea>
+    </div>
+  </form>
+</div>

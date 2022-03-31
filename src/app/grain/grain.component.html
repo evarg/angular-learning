@@ -1,0 +1,12 @@
+<div class="card" style="width: 14rem">
+  <img class="card-img-top" src="{{ image }}" alt="Card image cap" />
+  <div class="card-body">
+    <h5 class="card-title">
+      {{ name.length > 30 ? (name | slice: 0:30) + ".." : name }}
+    </h5>
+    <p class="card-text">
+      {{ desc.length > 100 ? (desc | slice: 0:100) + ".." : name }}
+    </p>
+    <a href="{{ link }}" class="btn btn-primary">Szczegóły</a>
+  </div>
+</div>
